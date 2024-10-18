@@ -10,17 +10,19 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #2F4858;
 }
 
 .container {
   max-width: 1050px;
   width: 90%;
-  margin: auto;
+  margin: center;
 }
 
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  background-color: #86BBD8;
 }
 
 .nav-container {
@@ -46,11 +48,16 @@ body {
   padding: 0.7rem;
 }
 
+.logo h1 {
+
+}
+
 .navbar .nav-container a:hover{
     font-weight: bolder;
 }
 
 .nav-container {
+  position: relative;
   display: block;
   position: relative;
   height: 60px;
@@ -86,7 +93,7 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #0e2431;
+  background: #2F4858;
 }
 
 .nav-container .hamburger-lines .line1 {
@@ -105,16 +112,16 @@ body {
 
 .navbar .menu-items {
   padding-top: 120px;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  background-color: #86bbd87c;
   height: 100vh;
-  width: 100%;
+  width: 50%;
   transform: translate(-150%);
   display: flex;
   flex-direction: column;
-  margin-left: -40px;
+  /* margin-left: -40px; */
   padding-left: 50px;
   transition: transform 0.5s ease-in-out;
-  text-align: center;
+  text-align: auto;
 }
 
 .navbar .menu-items li {
@@ -124,11 +131,13 @@ body {
 }
 
 .logo {
-  position: absolute;
-  top: 5px;
+  position: fixed;
+  top: 6px;
   right: 15px;
   font-size: 1.2rem;
-  color: #0e2431;
+  color: #2F4858;
+  
+
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -148,6 +157,6 @@ body {
 }
 
 .nav-container input[type="checkbox"]:checked ~ .logo{
-  display: none;
+
 }
 
