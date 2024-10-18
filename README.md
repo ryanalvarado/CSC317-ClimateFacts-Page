@@ -1,2 +1,2 @@
-# CSC317-ClimateFacts-Page
-Responsive and accessible web page for a fact page on climate change. 
+# CSC317 Web Development - Climate Change Facts responsive accessible website
+Single page with 6 facts.
