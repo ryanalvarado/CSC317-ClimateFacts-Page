@@ -140,6 +140,35 @@ body {
 
 }
 
+.facts {
+  margin: 20px; /* Add some margin around the facts section */
+  padding: 15px; /* Add some padding inside the section */
+  background-color: #2F4858; 
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.facts h2 {
+  font-family: 'Bebas Neue', sans-serif; /* Use one of the imported fonts */
+  font-size: 24px; /* Font size for the heading */
+  margin-bottom: 15px; /* Space below the heading */
+  color: #86BBD8;
+}
+
+.facts ul {
+  list-style-type: disc; /* Use disc bullets */
+  margin-left: 20px; /* Indent the list */
+}
+
+.facts li {
+  color:#86BBD8;
+  margin-bottom: 10px; /* Space between each fact */
+  font-family: 'Raleway', sans-serif; /* Use another imported font */
+  font-size: 16px; /* Font size for the facts */
+  line-height: 1.5; /* Improve line spacing for readability */
+}
+
+
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
   transform: translateX(0);
 }
