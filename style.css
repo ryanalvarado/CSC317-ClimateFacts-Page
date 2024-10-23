@@ -1,10 +1,4 @@
-/* CODE FROM TYPESETTING PROJECT, REPLACE */
 
-
-
-* {
-  box-sizing: border-box;
-}
 
 body {
   margin: 0 auto;
@@ -26,45 +20,12 @@ nav {
 }
 
 footer {
-  clear: both;
 }
 
-header, section, aside, nav, footer {
+header, nav, footer {
   padding: 20px;
 }
 
-/* header and footer */
-
-header, footer {
-
-}
-
-
-
-.ralewayClass {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-.graduate-regular {
-  font-family: "Graduate", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.bevan-regular {
-  font-family: "Bevan", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.bevan-regular-italic {
-  font-family: "Bevan", serif;
-  font-weight: 400;
-  font-style: italic;
-}
 
 header {
   font-family: "Graduate", serif;
@@ -76,10 +37,8 @@ h1 {
   font-family: "Graduate", serif;
   font-size: 2rem;
   letter-spacing: 0.2rem;
-  
 } 
 
-}
 
 p {
   font-size: 0.925rem; /* 14px/16=0.875em */
@@ -100,7 +59,6 @@ a:hover {
   text-decoration: none;
 }
 
-
 a:focus {
   color: #a66;
   text-decoration: none;
@@ -111,16 +69,8 @@ a:active {
   color: rgb(255, 0, 162);
 }
 
-a[href^="http"]::after {
-  content: "";
-  display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
-  margin-left: 0.25em;
 
-  background-size: 100%;
-  background-image: url("external-link-52.png");
-}
+
 
 ul {
   line-height: 125%;
@@ -134,31 +84,35 @@ nav li {
 }
 
 
-/* making a three column layout */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100px;
-    text-align: center;
-}
-
-
-header,
-footer {
-    text-align: center;
-    background-color: pink;
-}
-
-
-
-  div {
-      border: 2px solid #2ecc71;
-      margin-left: 6px;
-  }
 
   @media screen and (max-width: 768px) {
     body {
         gid-auto-flow: row;
         display: flex;
     } 
+ }
+ 
+ .ralewayClass {
+   font-family: "Raleway", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: <weight>;
+   font-style: normal;
+ }
+ 
+ .graduate-regular {
+   font-family: "Graduate", serif;
+   font-weight: 400;
+   font-style: normal;
+ }
+ 
+ .bevan-regular {
+   font-family: "Bevan", serif;
+   font-weight: 400;
+   font-style: normal;
+ }
+ 
+ .bevan-regular-italic {
+   font-family: "Bevan", serif;
+   font-weight: 400;
+   font-style: italic;
  }
