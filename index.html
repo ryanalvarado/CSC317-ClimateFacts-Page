@@ -51,43 +51,73 @@
       
         /* Navigation link styles */
         /* placing the nav a styles in the HTML for now cause the style.css is kinda wonky ~ Tony 10/22 */
-
         nav a:hover {
-          color: #9EE493; /* Change text color on hover */
+            color: #9EE493;
         }
         nav a {
-          position: relative; /* Position relative for pseudo-element */
-          color: #f2f2f2; /* Default text color */
+          position: relative; /* Position relative for pseudo-elements */
+          color: #f2f2f2; 
           text-decoration: none;
           padding: 14px 20px;
           display: block;
-          transition: color 0.3s ease; /* Fade in transition */
-        }
+          transition: color 0.3s ease; /* Animate in transition */
+      }
+          /* Pseudo-element for cloud effect */
+          nav a::before {
+            content: "";
+            opacity: 0.4; /* Slightly transparent */
+            position: absolute;
+            background-color: #86BDDB; /* Cloud color */
+            border-radius: 10%;
+            transition: all 0.1s ease; /* Animate out transition */
+            z-index: -1; /* Send the cloud behind the text */
+            visibility: hidden; /* Hide by default */
+            width: 100px; /* Width of the cloud shape */
+            height: 52px; /* Height of the cloud shape */
+            top: -2px; /* Position above the link */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+          }
 
-        /* Pseudo-element for cloud effect */
-        nav a::before {
-          content: "";
-          position: absolute;
-          background-color: #86BDDB; /* Cloud color */
-          border-radius: 10%;
+          /* Pseudo-element for water droplet */
+          nav a::after {
+              content: "";
+              position: absolute;
+              background-color: #86BDDB; /* Light blue for the droplet */
+              border-radius: 50%; /* Make it circular */
+              transition: all 0.1s ease; /* Animate out transition */
+              z-index: -1; /* Send the droplets behind the text */
+              width: 8px; /* Width of the droplet */
+              height: 8px; /* Height of the droplet */
+              top: 52px; /* Position below the cloud */
+              left: 50%; /* Center horizontally */
+              transform: translateX(-50%); /* Adjust for centering */
+              box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Soft shadow for depth */
+              visibility: hidden; /* Hide by default */
+              animation: drop 1s infinite; /* Animation to move the droplet down */
+          }
 
-          transition: all 0.1s ease; /* Fade out transition */
-          z-index: -1; /* Send the cloud behind the text */
-          visibility: hidden; /* Hide by default */
-          width: 100px; /* Width of the cloud shape */
-          height: 52px; /* Height of the cloud shape */
-          top: -2px; /* Position above the link */
-          left: 50%; /* Center horizontally */
-          transform: translateX(-50%); /* Adjust for centering */
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-        }
-
-        /* Show cloud on hover */
+      /* Keyframes for the droplet animation */
+      @keyframes drop {
+          0% {
+              top: 55px; /* Initial position */
+              opacity: 0.4; /* Initial opacity */
+          }
+          100% {
+              top: 70px; /* Final position (move down) */
+              opacity: 0; /* Final opacity  */
+          }
+}
+        /* Show both the cloud and droplets on hover */
         nav a:hover::before {
-          visibility: visible; /* Make cloud visible on hover */
-          transform: translateX(-50%) scale(1.1); /* Center and slightly increase size on hover */
+            visibility: visible; /* Make cloud visible on hover */
+            transform: translateX(-50%) scale(1.1); /* Center and slightly increase size on hover */
         }
-
+        nav a:hover::after,
+        nav a:hover::before {
+            visibility: visible; /* Show droplets when hovered */
+        }
         .container-one, .container-two, .container-three,
         .container-four, .container-five, .container-six, .container-seven {
             padding: 20px;
