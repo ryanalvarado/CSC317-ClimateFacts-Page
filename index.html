@@ -105,8 +105,50 @@
             }
         }
 
-        /* Larger screen styles */
-        @media (min-width: 601px) {
+
+        /* 601px to 693px makes the website look wonky, set it so mobile view remains the same in this range. */
+        @media (min-width: 601px) and (max-width: 693px) {
+            #toggle-menu {
+                display: none; /* Hide the checkbox */
+            }
+
+            #hamburger {
+                display: block; /* Show hamburger icon only on mobile */
+                font-size: 24px;
+                background: none;
+                border: none;
+                color: #f2f2f2;
+                cursor: pointer;
+                margin: 10px;
+            }
+
+            #nav-links {
+                flex-direction: column;
+                align-items: center;
+                background-color: #336699;
+                width: 100%;
+                padding: 0;
+                transition: max-height 0.5s ease-out; /* Transition for dropdown effect */
+                overflow: hidden; /* Prevent overflow during transition */
+                max-height: 0; /* Start with height of 0 for animation */
+            }
+
+            /* Show menu when checkbox is checked */
+            #toggle-menu:checked + #hamburger + #nav-links {
+                max-height: 300px; /* Set a max height when expanded (adjust as necessary) */
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            nav a {
+                padding: 10px 15px;
+                font-size: 1.2em;
+            }
+        }
+        
+        @media (min-width: 694px) {
             /* Ensure nav-links display flex on larger screens */
             #nav-links {
                 display: flex;
