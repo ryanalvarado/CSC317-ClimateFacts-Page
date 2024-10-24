@@ -8,6 +8,184 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     
     <style>
+/* Base styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #336699;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    position: relative; /* Position relative for pseudo-elements */
+    transition: color 0.3s ease; /* Animate in transition */
+}
+
+/* Navigation link styles */
+nav a:hover {
+    color: #9EE493;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    nav {
+        position: sticky;
+    }
+
+    #toggle-menu {
+        display: none; /* Hide the checkbox */
+    }
+
+    #hamburger {
+        display: block; /* Show hamburger icon only on mobile */
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #f2f2f2;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    #nav-links {
+        display: none; /* Start off hidden */
+        flex-direction: column;
+        align-items: center;
+        background-color: #336699;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Show menu when checkbox is checked */
+    #toggle-menu:checked + #hamburger + #nav-links {
+        display: flex; /* Show menu when the checkbox is checked */
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        padding: 10px 15px;
+        font-size: 1.2em;
+        color: #f2f2f2;
+    }
+}
+
+/* Larger screen styles */
+@media (min-width: 601px) {
+    /* Pseudo-element for cloud effect */
+    nav a::before {
+        content: "";
+        opacity: 0.4; /* Slightly transparent */
+        position: absolute;
+        background-color: #86BDDB; /* Cloud color */
+        border-radius: 10%;
+        transition: all 0.1s ease; /* Animate out transition */
+        z-index: -1; /* Send the cloud behind the text */
+        visibility: hidden; /* Hide by default */
+        width: 100px; /* Width of the cloud shape */
+        height: 52px; /* Height of the cloud shape */
+        top: -2px; /* Position above the link */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    }
+
+    /* Pseudo-element for water droplet */
+    nav a::after {
+        content: "";
+        position: absolute;
+        background-color: #86BDDB; /* Light blue for the droplet */
+        border-radius: 50%; /* Make it circular */
+        transition: all 0.1s ease; /* Animate out transition */
+        z-index: -1; /* Send the droplets behind the text */
+        width: 8px; /* Width of the droplet */
+        height: 8px; /* Height of the droplet */
+        top: 52px; /* Position below the cloud */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Soft shadow for depth */
+        visibility: hidden; /* Hide by default */
+        animation: drop 1s infinite; /* Animation to move the droplet down */
+    }
+
+    /* Keyframes for the droplet animation */
+    @keyframes drop {
+        0% {
+            top: 55px; /* Initial position */
+            opacity: 0.4; /* Initial opacity */
+        }
+        100% {
+            top: 70px; /* Final position (move down) */
+            opacity: 0; /* Final opacity  */
+        }
+    }
+
+    /* Show both the cloud and droplets on hover */
+    nav a:hover::before {
+        visibility: visible; /* Make cloud visible on hover */
+        transform: translateX(-50%) scale(1.1); /* Center and slightly increase size on hover */
+    }
+    nav a:hover::after,
+    nav a:hover::before {
+        visibility: visible; /* Show droplets when hovered */
+    }
+
+    /* General styles for larger screens */
+    #toggle-menu {
+        display: none; /* Hide checkbox */
+    }
+
+    #hamburger {
+        display: none; /* Hide hamburger icon */
+    }
+
+    #nav-links {
+        display: flex; /* Show navigation links by default */
+        justify-content: center; /* Center the links */
+    }
+
+    nav li {
+        margin: 0 15px; /* Space between nav items */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Graduate&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
@@ -23,101 +201,6 @@
             padding: 20px;
         }
 
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: #336699;
-            z-index: 1000; /* Ensure the navbar is above other content */
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav li {
-            margin: 0 15px; /* Space between nav items */
-        }
-
-        nav a {
-            color: #f2f2f2;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: block;
-        }
-      
-        /* Navigation link styles */
-        /* placing the nav a styles in the HTML for now cause the style.css is kinda wonky ~ Tony 10/22 */
-        nav a:hover {
-            color: #9EE493;
-        }
-        nav a {
-          position: relative; /* Position relative for pseudo-elements */
-          color: #f2f2f2; 
-          text-decoration: none;
-          padding: 14px 20px;
-          display: block;
-          transition: color 0.3s ease; /* Animate in transition */
-      }
-          /* Pseudo-element for cloud effect */
-          nav a::before {
-            content: "";
-            opacity: 0.4; /* Slightly transparent */
-            position: absolute;
-            background-color: #86BDDB; /* Cloud color */
-            border-radius: 10%;
-            transition: all 0.1s ease; /* Animate out transition */
-            z-index: -1; /* Send the cloud behind the text */
-            visibility: hidden; /* Hide by default */
-            width: 100px; /* Width of the cloud shape */
-            height: 52px; /* Height of the cloud shape */
-            top: -2px; /* Position above the link */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Adjust for centering */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-          }
-
-          /* Pseudo-element for water droplet */
-          nav a::after {
-              content: "";
-              position: absolute;
-              background-color: #86BDDB; /* Light blue for the droplet */
-              border-radius: 50%; /* Make it circular */
-              transition: all 0.1s ease; /* Animate out transition */
-              z-index: -1; /* Send the droplets behind the text */
-              width: 8px; /* Width of the droplet */
-              height: 8px; /* Height of the droplet */
-              top: 52px; /* Position below the cloud */
-              left: 50%; /* Center horizontally */
-              transform: translateX(-50%); /* Adjust for centering */
-              box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Soft shadow for depth */
-              visibility: hidden; /* Hide by default */
-              animation: drop 1s infinite; /* Animation to move the droplet down */
-          }
-
-      /* Keyframes for the droplet animation */
-      @keyframes drop {
-          0% {
-              top: 55px; /* Initial position */
-              opacity: 0.4; /* Initial opacity */
-          }
-          100% {
-              top: 70px; /* Final position (move down) */
-              opacity: 0; /* Final opacity  */
-          }
-}
-        /* Show both the cloud and droplets on hover */
-        nav a:hover::before {
-            visibility: visible; /* Make cloud visible on hover */
-            transform: translateX(-50%) scale(1.1); /* Center and slightly increase size on hover */
-        }
-        nav a:hover::after,
-        nav a:hover::before {
-            visibility: visible; /* Show droplets when hovered */
-        }
         .container-one, .container-two, .container-three,
         .container-four, .container-five, .container-six, .container-seven {
             padding: 20px;
@@ -142,14 +225,18 @@
     </header>
     
     <nav>
-      <ul>
-      <li><a href="#">Sources</a></li>
-      <li><a href="#">More Facts</a></li>
-      <li><a href="#">Donate</a></li>
-      <li><a href="#">Help</a></li>
-      <li><a href="#">How to Help</a></li>
+      <input type="checkbox" id="toggle-menu" />
+      <label for="toggle-menu" id="hamburger" aria-label="Toggle navigation">&#9776;</label>
+      <ul id="nav-links">
+        <li><a href="#">Sources</a></li>
+        <li><a href="#">More Facts</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">How to Help</a></li>
       </ul>
     </nav>
+    
+    
     
     <div class="container-one">
       <img src="./resources/globe.png" width="20%" height="20%">
