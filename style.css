@@ -62,13 +62,17 @@ nav a:hover {
     }
 }
 
-
-
-
 /* 601px to 693px makes the website look wonky, set it so mobile view remains the same in this range. */
 @media (min-width: 601px) and (max-width: 693px) {
     #toggle-menu {
         display: none; /* Hide the checkbox */
+    }
+    h3, p {
+        width: 100%; /* Make text elements take full width */
+        max-width: 600px; /* Limit text width */
+        text-align: center; /* Center-align text */
+        margin: 0 auto; /* Center the text block */
+        padding: 10px; /* Add some padding for spacing */
     }
 
     #hamburger {
@@ -186,12 +190,44 @@ footer {
 .container-four, .container-five, .container-six, .container-seven {
     padding: 20px;
     border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px; 
+    margin: 20px auto; /* Added margin for spacing */
+    transition: transform 0.9s ease; /* Transition for scaling */
 }
+
+/* Scale effect on hover */
+.container-one:hover, .container-two:hover, .container-three:hover,
+.container-four:hover, .container-five:hover, .container-six:hover, 
+.container-seven:hover {
+    transform: scale(1.05);
+}
+
+.container-one img, 
+.container-two img, 
+.container-three img,
+.container-four img, 
+.container-five img, 
+.container-six img, 
+.container-seven img {
+    width: 100px; /* Set consistent image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
 
 /* Mobile styles */
 @media (max-width: 600px) {
     #toggle-menu {
         display: none; /* Hide the checkbox */
+    }
+    h3, p {
+        width: 100%; /* Make text elements take full width */
+        max-width: 600px; /* Limit text width */
+        text-align: center; /* Center-align text */
+        margin: 0 auto; /* Center the text block */
+        padding: 10px; /* Add some padding for spacing */
     }
 
     #hamburger {
