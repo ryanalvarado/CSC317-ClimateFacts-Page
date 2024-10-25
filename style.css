@@ -8,8 +8,13 @@ body {
 }
 
 header {
+  font-family: 'Bevan';
     text-align: center;
     padding: 20px;
+}
+
+h1 {
+  font-family: 'Bevan'; /* NOT WORKING YET */
 }
 
 nav {
@@ -263,6 +268,7 @@ footer {
    font-weight: 400;
  }
  
- h1::before {
-   content: 🌍;
+ h3::before {
+   content: url(./resources/tiny-globe.png) ;
+   margin: 5px;
  }
