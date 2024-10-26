@@ -261,6 +261,56 @@ footer {
     transform: scale(1.05);
 }
 
+/* Background images for containers */
+.container-one {
+    background-image: url('./resources/header-background.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white; 
+}
+
+.container-two {
+    background-image: url('./resources/header-background.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white; 
+}
+
+.container-three {
+    background-image: url('./resources/header-background.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container-four {
+    background-image: url('./resources/header-background.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container-five {
+    background-image: url('./resources/header-background.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container-six {
+    background-image: url('./resources/header-background.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container-seven {
+    background-image: url('./resources/header-background.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
 .container-one img, 
 .container-two img, 
 .container-three img,
