@@ -8,9 +8,35 @@ body {
 }
 
 header {
-  font-family: 'Bevan';
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+}
+.header-title {
+    display: flex; /* Align elements horizontally */
+    justify-content: center; /* Center horizontally */
+    flex-direction: column;
+}
+
+.big-number {
+    font-size: 100px;
+    margin-top: 10px;
+}
+
+.title-text {
+    font-family: 'Bevan';
+    font-size: 2.5em; 
+    font-weight: bold;
+}
+
+.subtitle-text {
+    font-family: 'Bevan';
+    font-size: .5em;
+    font-weight: normal;
+    max-width: 370px; /* Set a maximum width for the subtitle text */
+    margin-top: -20px; /* Reduce space above the subtitle */
+
+    text-align: left;
 }
 
 h1 {
