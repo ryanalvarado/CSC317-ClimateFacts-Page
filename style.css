@@ -257,17 +257,6 @@ footer {
     transition: transform 0.9s ease; /* Transition for scaling */
 }
 
-/* Set image to fill the full width of the container */
-.container-one img, 
-.container-two img, 
-.container-three img,
-.container-four img, 
-.container-five img, 
-.container-six img, 
-.container-seven img {
-    width: 100%; /* Set image width to 100% to fill container */
-    height: auto; /* Maintain aspect ratio */
-}
 
 /* Text styles */
 h3, p {
@@ -275,11 +264,10 @@ h3, p {
     text-align: center; /* Center-align text */
 }
 
-/* Optional: Adjust container background color or image for visibility */
+/* Adjust container background color or image for visibility */
 .container-one, .container-two, .container-three,
 .container-four, .container-five, .container-six, .container-seven {
-    background-color: #002c4496; /* Example background color */
-    /* Optionally, you can set a background image */
+    background-color: #002c4496; 
     background-image: url('./resources/header-background.png'); 
     background-size: cover; 
     background-position: center; 
@@ -315,49 +303,49 @@ h3, p {
 /* Feel free to replace the background images. */
 .container-one {
     
-    background-image: url('./resources/DOGS.jpg'); 
+    background-image: url('./resources/Nature_1.jpg'); 
     background-size: cover;
     background-position: center;
     color: white; 
 }
 
 .container-two {
-    background-image: url('./resources/CATS.jpg'); 
+    background-image: url('./resources/Nature_2.jpg'); 
     background-size: cover;
     background-position: center;
     color: white; 
 }
 
 .container-three {
-    background-image: url('./resources/Dinosurfer.png'); 
+    background-image: url('./resources/Nature_3.jpg'); 
     background-size: cover;
     background-position: center;
     color: white;
 }
 
 .container-four {
-    background-image: url('./resources/croc.png'); 
+    background-image: url('./resources/Nature_4.jpg'); 
     background-size: cover;
     background-position: center;
     color: white;
 }
 
 .container-five {
-    background-image: url('./resources/f35.jpg'); 
+    background-image: url('./resources/Nature_5.jpg'); 
     background-size: cover;
     background-position: center;
     color: white;
 }
 
 .container-six {
-    background-image: url('./resources/header-background.png'); 
+    background-image: url('./resources/Nature_6.jpg'); 
     background-size: cover;
     background-position: center;
     color: white;
 }
 
 .container-seven {
-    background-image: url('./resources/header-background.png'); 
+    background-image: url('./resources/Nature_7.jpg'); 
     background-size: cover;
     background-position: center;
     color: white;
