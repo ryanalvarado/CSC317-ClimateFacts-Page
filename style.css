@@ -1,4 +1,4 @@
-
+v 
 
 /* Base styles */
 body {
@@ -7,7 +7,12 @@ body {
     padding: 0;
 }
 
+p {
+  font-family: "Raleway", sans-serif;
+}
+
 header {
+  
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Align items to the top */
@@ -35,6 +40,10 @@ header::before {
     z-index: 1; /* Ensure the overlay is above the background image */
 }
 
+a.footer {
+  color: white;
+}
+
 header * {
     position: relative;
     z-index: 2; /* Ensure the content is above the overlay */
@@ -52,7 +61,7 @@ header * {
 }
 
 .title-text {
-    font-family: 'Bevan';
+    
     font-size: 2.5em; 
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
@@ -70,8 +79,10 @@ header * {
     letter-spacing: 0.05em; /* Increase space between text */
 }
 
-h1 {
-  font-family: 'Bevan'; /* NOT WORKING YET */
+
+
+h3 {
+  font-family: 'Bevan';
 }
 
 nav {
@@ -434,14 +445,41 @@ h3, p {
    font-style: italic;
  }
  
- /* RYAN PSUEDO ELEMNENTS */
+ /* MORE PSUEDO ELEMENTS */
+ /* header::before pseudo-element is towards the top */
+ 
+ p::before {
+   margin: 5px;
+ }
+ 
+ p::after {
+   margin: 5px;
+ }
+ 
+ h3::after {
+    margin: 5px;
+  }
+ 
  p::first-letter {
-   color: #008898;
+   color: #88c4cc;
    font-size: large;
    font-weight: 400;
  }
  
+ p::first-line {
+    font-style: italic;
+  }
+ 
  h3::before {
    content: url(./resources/tiny-globe.png) ;
    margin: 5px;
+ }
+ 
+ ::selection {
+   color: #008898;
+ }
+ 
+ ul li::marker {
+   color: red;
+   font-size: 1.5em;
  }
